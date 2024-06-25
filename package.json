@@ -1,0 +1,25 @@
+{
+  "name": "authentication_with_jwt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rakibhasanbappy/authentication_with_jwt.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "jwt",
+    "postgres"
+  ],
+  "author": "Rakib Hasan Bappy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rakibhasanbappy/authentication_with_jwt/issues"
+  },
+  "homepage": "https://github.com/rakibhasanbappy/authentication_with_jwt#readme"
+}
