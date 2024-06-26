@@ -1,9 +1,11 @@
+// dependencies
 const express = require("express");
 const userHandler = require("./routeHandler/userHandler");
+require("dotenv").config();
 
 // express app initialization
 const app = express();
-app.use(express.json);
+app.use(express.json());
 
 // Routes
 app.use("/user", userHandler);
