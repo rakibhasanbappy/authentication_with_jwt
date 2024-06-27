@@ -30,12 +30,13 @@ db_operation.get_all = async (table) => {
 };
 
 // get single data
-db_operation.get_single = async (table, id) => {
+db_operation.get_single = async (table, username) => {
   const client = await get_client();
   try {
-    const { rows } = await client.query(`SELECT * FROM ${table} WHERE id=$1`, [
-      id,
-    ]);
+    const { rows } = await client.query(
+      `SELECT * FROM ${table} WHERE username=$1`,
+      [username]
+    );
     return rows;
   } catch (err) {
     return err;
