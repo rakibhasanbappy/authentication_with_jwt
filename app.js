@@ -1,6 +1,7 @@
 // dependencies
 const express = require("express");
 const userHandler = require("./routeHandler/userHandler");
+const loginCheck = require("./middlewares/checkLogin");
 require("dotenv").config();
 
 // express app initialization
@@ -10,7 +11,8 @@ app.use(express.json());
 // Routes
 app.use("/user", userHandler);
 
-app.get("/", (req, res) => {
+// default route
+app.get("/", loginCheck, (req, res) => {
   res.send("Hello World");
 });
 
