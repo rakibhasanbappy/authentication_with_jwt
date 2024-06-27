@@ -6,11 +6,11 @@ const db_operation = {};
 
 // insert data
 db_operation.insert = async (table, data) => {
-  const client = await get_client();
   try {
+    const client = await get_client();
     const { rows } = await client.query(
-      `INSERT INTO ${table} VALUES($1) RETURNING *`,
-      [data]
+      `INSERT INTO ${table} (username, name, password) VALUES($1, $2, $3) RETURNING *`,
+      [data.username, data.name, data.password]
     );
     return rows;
   } catch (err) {
